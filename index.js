@@ -1,27 +1,25 @@
 const app = "I don't do much."
 
-function bumpCounter() {
-	var counter = 0;
-	function addBump() {
+function bumpCounter(){
+	var counter = 0
+
+	function addBump(){
 		counter++
 	}
 
-	function getBumps() {
+	function getBumps(){
 		return counter
 	}
 
-	return { 
-		addBump,
-		getBumps
-	};
+	return { addBump, getBumps }
 }
 
 function createAnimal(animalType) {
-	return function (deadlyDevice) {
+	return function deadlyDevice(deadlyDevice) {
 		return {animalType, deadlyDevice}
-	}	
+	}
 }
 
-var sharkCreator = createAnimal('Shark');
-var sharkWithFrickinLaserbeam = sharkCreator('Laserbeam');
-var sharkWithFrickinCannon = sharkCreator('Cannon');
+var sharkCreator = createAnimal('Shark')
+var sharkWithFrickinLaserbeam = sharkCreator('Laserbeam')
+var sharkWithFrickinCannon = sharkCreator('Cannon')
